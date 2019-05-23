@@ -24,8 +24,4 @@ Program will Print to following Output Files:	GeneratedAcceleration.txt
 						WorkFunction.txt
 						PowerFunction.txt
 
-CopyRight: Evan James Rabeaux
-5/12/2017
-This Software was written in full by Evan James Rabeaux.
-Please do not redistribute, copy, or use this software for any other use than as a sample of my coding work.
 
