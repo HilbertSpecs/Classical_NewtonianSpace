@@ -421,14 +421,7 @@ return PmagTotal;
 }
 
 
-/*
 
- CopyRight: Evan James Rabeaux
-5/12/2017
-This Software was written in full by Evan James Rabeaux.
-Please do not redistribute, copy, or use this software for any other use than as a viewing sample of my coding work.
- 
- */
 
 
 
