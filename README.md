@@ -1,10 +1,13 @@
 # NewtonianSpace
-				MAC OSX Terminal
+				
+MAC OSX Terminal
 
 Instructions for Compiling and Running ElementaryAnalysis2.cpp source code file.
  		
 Class Specification file: NewtonianSpace.hpp
+
 Class Implementation file: NewtonianSpace2.cpp
+
 Source Code: ElementaryAnalysis2.cpp
 
 Object Files created: g++ -c -o NewtonianSpace2.o NewtonianSpace2.cpp
