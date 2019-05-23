@@ -250,19 +250,5 @@ class NewtonianSpace
 
 #endif
 
-/*
-
- Need to figure out how to connect functions or pass outputs from functions
-as inputs to the next function.  First order Ode solver for velocity then again
-for position.  From here can take the inner product of Fx and dx, Fy and dy, Fz and dz
-over each interval to calculate work and then from here Power on a given time basis.
-
- 
-CopyRight: Evan James Rabeaux
-5/12/2017
-This Software was written in full by Evan James Rabeaux.
-Please do not redistribute, copy, or use this software for any other use than as a viewing sample of my coding work.
-
- */
 
 
