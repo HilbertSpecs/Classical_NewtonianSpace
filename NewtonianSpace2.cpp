@@ -110,9 +110,9 @@ double NewtonianSpace::getIntPosition() const
 {
 	cout << "The initial position of the object relative to the origin is " << x[0] << ", " << y[0] << ", " << z[0] << ", " << rmag[0] << endl;
 
-return x[0];
+/*return x[0];
 return y[0];
-return z[0];
+return z[0];*/
 return rmag[0];
 
 }
@@ -121,9 +121,9 @@ double NewtonianSpace::getIntVelocity() const
 {
 	cout << "The initial velocity of the object is " << vx[0] << ", " << vy[0] << ", " << vz[0] << ", " << vmag[0] << endl;
 
-return vx[0];
+/*return vx[0];
 return vy[0];
-return vz[0];
+return vz[0];*/
 return vmag[0];
 
 }
@@ -132,9 +132,9 @@ double NewtonianSpace::getIntAcceleration() const
 {
 	cout << "The initial acceleration of the object is " << ax[0] << ", " << ay[0] << ", " << az[0] << ", " << amag[0] << endl;
 
-return ax[0];
+/*return ax[0];
 return ay[0];
-return az[0];
+return az[0];*/
 return amag[0];
 
 }
@@ -390,9 +390,9 @@ double NewtonianSpace::calculateWork(int size)
 	cout << "WxTotal\t\tWyTotal\t\tWzTotal\t\tWmagTotal" << endl;
 	cout << WxTotal << "\t\t" << WyTotal << "\t\t" << WzTotal << "\t\t" << WmagTotal << endl;
 	
-return WxTotal;
+/*return WxTotal;
 return WyTotal;
-return WzTotal;
+return WzTotal;*/
 return WmagTotal;
 
 }
@@ -413,9 +413,9 @@ double NewtonianSpace::calculatePower(int size)
 	cout << "PxTotal\t\tPyTotal\t\tPzTotal\t\tPmagTotal" << endl;
 	cout << PxTotal << "\t\t" << PyTotal << "\t\t" << PzTotal << "\t\t" << PmagTotal << endl;
 
-return PxTotal;
+/*return PxTotal;
 return PyTotal;
-return PzTotal;
+return PzTotal;*/
 return PmagTotal;
 
 }
