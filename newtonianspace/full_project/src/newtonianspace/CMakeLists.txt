@@ -1,23 +1,23 @@
-add_library(calc_obj OBJECT calc.cpp)
-target_include_directories(calc_obj INTERFACE
+add_library(newtonianspace_obj OBJECT NewtonianSpace.cpp)
+target_include_directories(newtonianspace_obj INTERFACE
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
   "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>"
 )
-set_target_properties(calc_obj PROPERTIES
-    PUBLIC_HEADER src/calc/include/calc/calc.h
+set_target_properties(newtonianspace_obj PROPERTIES
+    PUBLIC_HEADER src/newtonianspace/include/newtonianspace/NewtonianSpace.hpp
     POSITION_INDEPENDENT_CODE 1
 )
 
-add_library(calc_shared SHARED)
-target_link_libraries(calc_shared calc_obj)
-add_library(calc_static STATIC)
-target_link_libraries(calc_static calc_obj)
+add_library(newtonianspace_shared SHARED)
+target_link_libraries(newtonianspace_shared newtonianspace_obj)
+add_library(newtonianspace_static STATIC)
+target_link_libraries(newtonianspace_static newtonianspace_obj)
 
 include(Coverage)
-CleanCoverage(calc_static)
+CleanCoverage(newtonianspace_static)
 include(Format)
-Format(calc_static .)
+Format(newtonianspace_static .)
 include(CppCheck)
-AddCppCheck(calc_obj)
+AddCppCheck(newtonianspace_obj)
 include(Doxygen)
-Doxygen(calc src/calc)
+Doxygen(newtonianspace doc/newtonianspace)
