@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-#include "NewtonianSpace.hpp"
+#include "include/newtonianspace/NewtonianSpace.hpp"
 using namespace std;
 
 /*

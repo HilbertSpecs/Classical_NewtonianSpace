@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef NEWTONIANSPACE
 #define NEWTONIANSPACE
 #include <iomanip>

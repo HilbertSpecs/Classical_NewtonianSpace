@@ -6,7 +6,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include "NewtonianSpace.hpp"
+#include "include/newtonianspace/NewtonianSpace.hpp"
 using namespace std;
 
 NewtonianSpace::NewtonianSpace(int len)
