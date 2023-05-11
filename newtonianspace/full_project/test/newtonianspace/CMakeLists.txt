@@ -1,4 +1,4 @@
-add_executable(calc_test calc_test.cpp)
-target_link_libraries(calc_test PRIVATE calc_static)
-AddTests(calc_test)
-EnableCoverage(calc_obj)
+add_executable(newtonianspace_test newtonianspace_test.cpp)
+target_link_libraries(newtonianspace_test PRIVATE newtonianspace_static)
+AddTests(newtonianspace_test)
+EnableCoverage(newtonianspace_obj)

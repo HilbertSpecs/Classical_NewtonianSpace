@@ -2,10 +2,12 @@
 
 #include <gtest/gtest.h>
 
-TEST(CalcTest, SumAddsTwoInts) {
-  EXPECT_EQ(4, Calc::Sum(2, 2));
+TEST(NewtonianSpaceTest, SetMass) {
+  EXPECT_EQ(45==NewtonianSpace::getMass(), NewtonianSpace::setMass(45));
 }
 
-TEST(CalcTest, MultiplyMultipliesTwoInts) {
+/*
+TEST(NewtonianSpaceTest, MultiplyMultipliesTwoInts) {
   EXPECT_EQ(12, Calc::Multiply(3, 4));
 }
+*/
