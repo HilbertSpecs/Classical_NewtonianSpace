@@ -24,31 +24,31 @@ NewtonianSpace::NewtonianSpace(int len)
     PzTotal=0;
     PmagTotal=0;
     
-	size = len;
-	create_xArray(size);	
-	create_yArray(size);
-	create_zArray(size);
-	create_rmagArray(size);
-	create_vxArray(size);
-	create_vyArray(size);
-	create_vzArray(size);
-	create_vmagArray(size);
-	create_axArray(size);
-	create_ayArray(size);
-	create_azArray(size);
-	create_amagArray(size);
-	create_FxArray(size);
-	create_FyArray(size);
-	create_FzArray(size);
-	create_FmagArray(size);
-	create_WxArray(size);
-	create_WyArray(size);
-	create_WzArray(size);
-	create_WmagArray(size);
-	create_PxArray(size);
-	create_PyArray(size);
-	create_PzArray(size);
-	create_PmagArray(size);
+    size = len;
+    create_xArray(size);
+    create_yArray(size);
+    create_zArray(size);
+    create_rmagArray(size);
+    create_vxArray(size);
+    create_vyArray(size);
+    create_vzArray(size);
+    create_vmagArray(size);
+    create_axArray(size);
+    create_ayArray(size);
+    create_azArray(size);
+    create_amagArray(size);
+    create_FxArray(size);
+    create_FyArray(size);
+    create_FzArray(size);
+    create_FmagArray(size);
+    create_WxArray(size);
+    create_WyArray(size);
+    create_WzArray(size);
+    create_WmagArray(size);
+    create_PxArray(size);
+    create_PyArray(size);
+    create_PzArray(size);
+    create_PmagArray(size);
 
 }
 
