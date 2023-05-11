@@ -13,6 +13,11 @@ target_link_libraries(newtonianspace_shared newtonianspace_obj)
 add_library(newtonianspace_static STATIC)
 target_link_libraries(newtonianspace_static newtonianspace_obj)
 
+#Add this to create executable target in full_project
+#[[add_executable(elementaryanalysis ElementaryAnalysis.cpp)
+target_link_libraries(elementaryanalysis newtonianspace_static)]]
+#EndAdd
+
 include(Coverage)
 CleanCoverage(newtonianspace_static)
 include(Format)
