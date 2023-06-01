@@ -1,10 +1,1 @@
-NewtonianSpace.hpp.gch
-NewtonianSpace2.o
-ElementaryAnalysis.o
-exeElementaryAnalysis
-CalculatedForce.txt
-GeneratedAccel.txt
-PositionTrajectory.txt
-PowerFunction.txt
-VelocityTrajectory.txt
-WorkFunction.txt
+.DS_Store

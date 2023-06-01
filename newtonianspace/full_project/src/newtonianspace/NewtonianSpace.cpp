@@ -6,36 +6,93 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include "NewtonianSpace.hpp"
+#include "include/newtonianspace/NewtonianSpace.hpp"
 using namespace std;
+
+NewtonianSpace::NewtonianSpace()
+{
+    size = 100;
+    
+    min=0;
+    max=0;
+    dt=0;
+    m=0;
+    WxTotal=0;
+    WyTotal=0;
+    WzTotal=0;
+    WmagTotal=0;
+    PxTotal=0;
+    PyTotal=0;
+    PzTotal=0;
+    PmagTotal=0;
+
+    create_xArray(size);
+    create_yArray(size);
+    create_zArray(size);
+    create_rmagArray(size);
+    create_vxArray(size);
+    create_vyArray(size);
+    create_vzArray(size);
+    create_vmagArray(size);
+    create_axArray(size);
+    create_ayArray(size);
+    create_azArray(size);
+    create_amagArray(size);
+    create_FxArray(size);
+    create_FyArray(size);
+    create_FzArray(size);
+    create_FmagArray(size);
+    create_WxArray(size);
+    create_WyArray(size);
+    create_WzArray(size);
+    create_WmagArray(size);
+    create_PxArray(size);
+    create_PyArray(size);
+    create_PzArray(size);
+    create_PmagArray(size);
+
+}
 
 NewtonianSpace::NewtonianSpace(int len)
 {
-	size = len;
-	create_xArray(size);	
-	create_yArray(size);
-	create_zArray(size);
-	create_rmagArray(size);
-	create_vxArray(size);
-	create_vyArray(size);
-	create_vzArray(size);
-	create_vmagArray(size);
-	create_axArray(size);
-	create_ayArray(size);
-	create_azArray(size);
-	create_amagArray(size);
-	create_FxArray(size);
-	create_FyArray(size);
-	create_FzArray(size);
-	create_FmagArray(size);
-	create_WxArray(size);
-	create_WyArray(size);
-	create_WzArray(size);
-	create_WmagArray(size);
-	create_PxArray(size);
-	create_PyArray(size);
-	create_PzArray(size);
-	create_PmagArray(size);
+    min=0;
+    max=0;
+    dt=0;
+    m=0;
+    WxTotal=0;
+    WyTotal=0;
+    WzTotal=0;
+    WmagTotal=0;
+    PxTotal=0;
+    PyTotal=0;
+    PzTotal=0;
+    PmagTotal=0;
+    
+    size = len;
+    create_xArray(size);
+    create_yArray(size);
+    create_zArray(size);
+    create_rmagArray(size);
+    create_vxArray(size);
+    create_vyArray(size);
+    create_vzArray(size);
+    create_vmagArray(size);
+    create_axArray(size);
+    create_ayArray(size);
+    create_azArray(size);
+    create_amagArray(size);
+    create_FxArray(size);
+    create_FyArray(size);
+    create_FzArray(size);
+    create_FmagArray(size);
+    create_WxArray(size);
+    create_WyArray(size);
+    create_WzArray(size);
+    create_WmagArray(size);
+    create_PxArray(size);
+    create_PyArray(size);
+    create_PzArray(size);
+    create_PmagArray(size);
 
 }
 
@@ -101,41 +158,41 @@ void NewtonianSpace::setIntAcceleration(double aox, double aoy, double aoz)
 double NewtonianSpace::getMass() const
 {
 
-	cout << "The mass of the object in the Space is " << m << endl;
+	//cout << "The mass of the object in the Space is " << m << endl;
 
-return m;
+    return m;
 }
 
 double NewtonianSpace::getIntPosition() const
 {
-	cout << "The initial position of the object relative to the origin is " << x[0] << ", " << y[0] << ", " << z[0] << ", " << rmag[0] << endl;
+	//cout << "The initial position of the object relative to the origin is " << x[0] << ", " << y[0] << ", " << z[0] << ", " << rmag[0] << endl;
 
-/*return x[0];
-return y[0];
-return z[0];*/
-return rmag[0];
+    /*return x[0];
+    return y[0];
+    return z[0];*/
+    return rmag[0];
 
 }
 
 double NewtonianSpace::getIntVelocity() const
 {
-	cout << "The initial velocity of the object is " << vx[0] << ", " << vy[0] << ", " << vz[0] << ", " << vmag[0] << endl;
+	//cout << "The initial velocity of the object is " << vx[0] << ", " << vy[0] << ", " << vz[0] << ", " << vmag[0] << endl;
 
-/*return vx[0];
-return vy[0];
-return vz[0];*/
-return vmag[0];
+    /*return vx[0];
+    return vy[0];
+    return vz[0];*/
+    return vmag[0];
 
 }
 
 double NewtonianSpace::getIntAcceleration() const
 {
-	cout << "The initial acceleration of the object is " << ax[0] << ", " << ay[0] << ", " << az[0] << ", " << amag[0] << endl;
+	//cout << "The initial acceleration of the object is " << ax[0] << ", " << ay[0] << ", " << az[0] << ", " << amag[0] << endl;
 
-/*return ax[0];
-return ay[0];
-return az[0];*/
-return amag[0];
+    /*return ax[0];
+    return ay[0];
+    return az[0];*/
+    return amag[0];
 
 }
 
@@ -166,8 +223,7 @@ void NewtonianSpace::generateAcceleration(int n,int min,int max)
 
 	}
 
-
-dataFile.close();
+    dataFile.close();
 
 }
 
@@ -187,7 +243,7 @@ void NewtonianSpace::calculateForce(int size)
     dataFile << fixed << setprecision(3);
 	dataFile << "The computed Force for the " << N << " Generated Acceleration values are: " << endl;	
 	dataFile << "index\t\tFx\t\tFy\t\tFz\t\tFmag" << endl;
-//	cout << "0" << "\t\t" << Fx[0] << "\t\t" << Fy[0] << "\t\t" << Fz[0] << "\t\t" << Fmag[0] << endl;
+	//cout << "0" << "\t\t" << Fx[0] << "\t\t" << Fy[0] << "\t\t" << Fz[0] << "\t\t" << Fmag[0] << endl;
 	dataFile << "0" << "\t\t" << Fx[0] << "\t\t" << Fy[0] << "\t\t" << Fz[0] << "\t\t" << Fmag[0] << endl;
 
 
@@ -203,7 +259,7 @@ void NewtonianSpace::calculateForce(int size)
 
 		}
 
-dataFile.close();
+    dataFile.close();
 
 }
 
@@ -261,7 +317,7 @@ void NewtonianSpace::velocityTrajectory(int size)
 		dataFile << i << "\t\t" << vx[i] << "\t\t" << vy[i] << "\t\t" << vz[i] << "\t\t" << vmag[i] << endl;
 	}
 
-dataFile.close();
+    dataFile.close();
 
 }
 
@@ -282,7 +338,7 @@ void NewtonianSpace::positionTrajectory(int size)
 		dataFile << i << "\t\t" << x[i] << "\t\t" << y[i] << "\t\t" << z[i] << "\t\t" << rmag[i] << endl;
 	}
 
-dataFile.close();
+    dataFile.close();
 
 }
 
@@ -299,8 +355,6 @@ void NewtonianSpace::computeWork(int size)
 	dx = new double[N];
 	dy = new double[N];
 	dz = new double[N];
-
-
 	
 	Wx[0] = 0;
 	Wy[0] = 0;
@@ -327,12 +381,12 @@ void NewtonianSpace::computeWork(int size)
 	}
 
 
-delete [] dx;
-delete [] dy;
-delete [] dz;
+    delete [] dx;
+    delete [] dy;
+    delete [] dz;
 
 
-dataFile.close();
+    dataFile.close();
 
 
 }
@@ -365,12 +419,12 @@ void NewtonianSpace::computePower(int size, double timestep)
 		Pz[i] = Wz[i]/dt;
 		Pmag[i] = sqrt(pow(Px[i],2)+pow(Py[i],2)+pow(Pz[i],2));
 
-	dataFile << i << "\t\t" << Px[i] << "\t\t" << Py[i] << "\t\t" << Pz[i] << "\t\t" << Pmag[i] << endl;
+        dataFile << i << "\t\t" << Px[i] << "\t\t" << Py[i] << "\t\t" << Pz[i] << "\t\t" << Pmag[i] << endl;
 
 	}
 	
 
-dataFile.close();
+    dataFile.close();
 
 }
 
@@ -387,13 +441,13 @@ double NewtonianSpace::calculateWork(int size)
 		WmagTotal += Wmag[i];
 	}
 
-	cout << "WxTotal\t\tWyTotal\t\tWzTotal\t\tWmagTotal" << endl;
-	cout << WxTotal << "\t\t" << WyTotal << "\t\t" << WzTotal << "\t\t" << WmagTotal << endl;
+	//cout << "WxTotal\t\tWyTotal\t\tWzTotal\t\tWmagTotal" << endl;
+	//cout << WxTotal << "\t\t" << WyTotal << "\t\t" << WzTotal << "\t\t" << WmagTotal << endl;
 	
-/*return WxTotal;
-return WyTotal;
-return WzTotal;*/
-return WmagTotal;
+    /*return WxTotal;
+    return WyTotal;
+    return WzTotal;*/
+    return WmagTotal;
 
 }
 
@@ -410,13 +464,13 @@ double NewtonianSpace::calculatePower(int size)
 		PmagTotal += Pmag[i];
 	}
 
-	cout << "PxTotal\t\tPyTotal\t\tPzTotal\t\tPmagTotal" << endl;
-	cout << PxTotal << "\t\t" << PyTotal << "\t\t" << PzTotal << "\t\t" << PmagTotal << endl;
+	//cout << "PxTotal\t\tPyTotal\t\tPzTotal\t\tPmagTotal" << endl;
+	//cout << PxTotal << "\t\t" << PyTotal << "\t\t" << PzTotal << "\t\t" << PmagTotal << endl;
 
-/*return PxTotal;
-return PyTotal;
-return PzTotal;*/
-return PmagTotal;
+    /*return PxTotal;
+    return PyTotal;
+    return PzTotal;*/
+    return PmagTotal;
 
 }
 

@@ -1,0 +1,4 @@
+add_executable(newtonianspace_test newtonianspace_test.cpp)
+target_link_libraries(newtonianspace_test PRIVATE newtonianspace_static)
+AddTests(newtonianspace_test)
+EnableCoverage(newtonianspace_obj)

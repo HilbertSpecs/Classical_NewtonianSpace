@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef NEWTONIANSPACE
 #define NEWTONIANSPACE
 #include <iomanip>
@@ -226,13 +228,14 @@ class NewtonianSpace
 		// Constructors, Assigning or Setting Parameters, Getting these Values, Printing these values, Destructors.
 
 	public:
+        NewtonianSpace();
 		NewtonianSpace(int);
 		~NewtonianSpace();
-		void setMass(double mass);
+		virtual void setMass(double mass);
 		void setIntPosition(double, double, double);
 		void setIntVelocity(double, double, double);
 		void setIntAcceleration(double, double, double);
-		double getMass() const;
+		virtual double getMass() const;
 		double getIntPosition() const;
 		double getIntVelocity() const;
 		double getIntAcceleration() const;
